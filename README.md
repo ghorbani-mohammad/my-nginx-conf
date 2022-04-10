@@ -24,10 +24,9 @@ Then clone this repo on that path by
 ```sh
 git clone git@github.com:ghorbani-mohammad/my-nginx-conf.git .
 ```
-Change content of /etc/nginx/nginx.conf to this:
-
+Remove old nginx.conf and create symbolic link to our new conf file by bellow command
 ```sh
-include /etc/nginx/my_conf/nginx.conf;
+ln -s my_conf/nginx.conf nginx.conf
 ```
 Done! after each merge on master branch changes are automatically wil get by server and nginx will be reloaded.
 

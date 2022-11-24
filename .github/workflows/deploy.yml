@@ -17,6 +17,6 @@ jobs:
           username: ${{secrets.USERNAME}}
           KEY: ${{secrets.SSHKEY}}
           script: >
-            cd ${{ secrets.PATH }} 
+            cd ${{secrets.PATH}} 
             && git pull 
             && service nginx reload
